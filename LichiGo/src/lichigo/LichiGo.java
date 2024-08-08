@@ -4,18 +4,19 @@
  * and open the template in the editor.
  */
 package lichigo;
+import Views.*;
+import java.io.FileNotFoundException;
 
-/**
- *
- * @author Estudiante
- */
-public class LichiGo {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+public class LichiGo{
     
+ 
+
+    public static void main(String[] args) throws FileNotFoundException {
+
+        Entry Ingreso = new Entry();
+        Ingreso.setVisible(true);
+        Ingreso.setLocationRelativeTo(null);
+            
+    }  
 }
