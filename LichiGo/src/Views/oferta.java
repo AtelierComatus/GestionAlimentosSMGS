@@ -42,10 +42,13 @@ public class oferta extends javax.swing.JFrame {
         FrutVerd = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
         Frutas = new javax.swing.JComboBox<>();
+        Pedir = new javax.swing.JButton();
+        unidadesF = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        Tabla = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -61,8 +64,6 @@ public class oferta extends javax.swing.JFrame {
 
         jLabel6.setText("Unidades");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         jScrollPane2.setViewportView(jTextPane1);
 
         Frutas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mora", "Naranja", "Mandarina", "Gulupa", "Cereza",
@@ -73,6 +74,33 @@ Frutas.addActionListener(new java.awt.event.ActionListener() {
     }
     });
 
+    Pedir.setText("Pedir");
+    Pedir.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            PedirActionPerformed(evt);
+        }
+    });
+
+    unidadesF.setText("1");
+    unidadesF.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            unidadesFActionPerformed(evt);
+        }
+    });
+
+    Tabla.setModel(new javax.swing.table.DefaultTableModel(
+        new Object [][] {
+            {null, null, null},
+            {null, null, null},
+            {null, null, null},
+            {null, null, null}
+        },
+        new String [] {
+            "id", "Fruta", "Cantidad"
+        }
+    ));
+    jScrollPane1.setViewportView(Tabla);
+
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
     getContentPane().setLayout(layout);
     layout.setHorizontalGroup(
@@ -81,29 +109,27 @@ Frutas.addActionListener(new java.awt.event.ActionListener() {
             .addGap(55, 55, 55)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addComponent(jLabel1)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel1)
+                        .addComponent(FrutVerd)
+                        .addComponent(jLabel5)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jLabel3)
+                            .addGap(62, 62, 62)
+                            .addComponent(Frutas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Pedir)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jLabel6)
+                            .addGap(18, 18, 18)
+                            .addComponent(unidadesF, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel2)
                     .addGap(80, 80, 80))
                 .addGroup(layout.createSequentialGroup()
-                    .addComponent(jLabel3)
-                    .addGap(62, 62, 62)
-                    .addComponent(Frutas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(100, 100, 100)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(FrutVerd)
-                            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel6)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(jLabel5))
-                            .addGap(209, 209, 209))))))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(82, 82, 82)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(115, Short.MAX_VALUE))))
     );
     layout.setVerticalGroup(
         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -112,22 +138,25 @@ Frutas.addActionListener(new java.awt.event.ActionListener() {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(jLabel1)
                 .addComponent(jLabel2))
-            .addGap(38, 38, 38)
-            .addComponent(FrutVerd)
+            .addGap(70, 70, 70)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(Frutas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel3))
             .addGap(18, 18, 18)
+            .addComponent(FrutVerd)
+            .addGap(38, 38, 38)
+            .addComponent(jLabel5)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(Frutas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-            .addContainerGap(254, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(jLabel6)
+                .addComponent(unidadesF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGap(39, 39, 39)
+            .addComponent(Pedir)
+            .addContainerGap(69, Short.MAX_VALUE))
     );
 
     pack();
@@ -139,17 +168,110 @@ Frutas.addActionListener(new java.awt.event.ActionListener() {
                 // Get the selected item from the JComboBox
                 String selectedFruit = (String) Frutas.getSelectedItem();
                 // Update the JLabel with the selected fruit
-                FrutVerd.setText("Fruta seleccionada: " + selectedFruit);
-                
+                FrutVerd.setText("Fruta seleccionada: " + selectedFruit);                              
             }
         });
     }//GEN-LAST:event_FrutasActionPerformed
+
+    
+    private void unidadesFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unidadesFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_unidadesFActionPerformed
+ 
+    public static boolean isNumeric(String strNum) {
+    if (strNum == null) {
+        return false;
+    }
+    try {
+        double d = Double.parseDouble(strNum);
+    } catch (NumberFormatException nfe) {
+        return false;
+    }
+    return true;
+    }  
+    
+    public void loadData(){
+      try {
+        Class.forName("com.mysql.cj.jdbc.Driver");
+
+        String url = "jdbc:MySQL://localhost:3306/java_users_db";
+        String user = "root";
+        String pass = "";
+
+        Connection con = DriverManager.getConnection(url, user, pass);
+        Statement st = con.createStatement();
+            
+       DefaultTableModel modelo = new DefaultTableModel(new String[]{"Id", "Fruta", "Cantidad"}, 0);
+      
+       Tabla.setModel(modelo);
+       String sql = "SELECT * FROM pedido";
+       
+       ResultSet rs = st.executeQuery(sql);
+       String i, F, C;
+       while(rs.next()){
+         i = rs.getString("id");
+         F = rs.getString("Fruta");
+         C = rs.getString("Cantidad");
+         
+         modelo.addRow(new Object[]{i, F, C});
+       }
+       
+     }catch(Exception e){
+            System.out.println("Error "+ e.getMessage());
+     }   
+}  
+    
+    private void PedirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PedirActionPerformed
+        // TODO add your handling code here:
+        String Un, Fr, query;
+        
+        
+        //connect to database
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            
+            String url = "jdbc:MySQL://localhost:3306/pfrutas";
+            String user = "root";
+            String pass = "";
+            
+            Connection con = DriverManager.getConnection(url, user, pass);
+            Statement st = con.createStatement();
+            
+            if("".equals(unidadesF.getText())){
+             
+                JOptionPane.showMessageDialog(new JFrame(), "Ingrese la cantidad del producto que desee ", "Dialog",
+                                     JOptionPane.ERROR_MESSAGE);
+            }else if(!isNumeric(unidadesF.getText())){
+             
+                JOptionPane.showMessageDialog(new JFrame(), "Ingrese un numero", "Dialog",
+                                     JOptionPane.ERROR_MESSAGE);
+            }else {
+                Fr = FrutVerd.getText();
+                Un = unidadesF.getText();
+                
+                query = "INSERT INTO pedido (Fruta, Cantidad) "
+                        + "VALUES ('"+Fr+"','"+Un+"')";
+               
+               st.executeUpdate(query);
+               FrutVerd.setText("");
+               unidadesF.setText("1");
+              
+               showMessageDialog(null, "Pedido exitoso");
+               loadData();
+               con.close();
+            }   
+        }catch(Exception e){
+            System.out.println("Error "+ e.getMessage());
+            
+        }
+    }//GEN-LAST:event_PedirActionPerformed
     
     
     
     /**
      * @param args the command line arguments
      */
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -185,13 +307,16 @@ Frutas.addActionListener(new java.awt.event.ActionListener() {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel FrutVerd;
     private javax.swing.JComboBox<String> Frutas;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JButton Pedir;
+    private javax.swing.JTable Tabla;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JTextField unidadesF;
     // End of variables declaration//GEN-END:variables
 }
