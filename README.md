@@ -17,3 +17,6 @@ JOptionPane(Excepciones)
 ![image](https://github.com/user-attachments/assets/98940d82-f1fe-4dc2-80bb-72578949af29)
 
 ![image](https://github.com/user-attachments/assets/725ca0dd-fe9e-46bc-a752-8f29c034b148)
+
+Pedido realizado
+![image](https://github.com/user-attachments/assets/508fc567-ea22-434b-a8b5-11a945f7d837)
