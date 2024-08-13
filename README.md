@@ -20,3 +20,6 @@ JOptionPane(Excepciones)
 
 Pedido realizado
 ![image](https://github.com/user-attachments/assets/508fc567-ea22-434b-a8b5-11a945f7d837)
+
+Paquetes
+![image](https://github.com/user-attachments/assets/d773b81a-7070-4bee-949a-a4605d579914)
