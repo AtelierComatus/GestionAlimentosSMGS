@@ -12,3 +12,8 @@ Selección de fruta
 
 jComboBox
 ![image](https://github.com/user-attachments/assets/77ea8949-6aaa-4438-b1ae-620750d165d2)
+
+JOptionPane(Excepciones)
+![image](https://github.com/user-attachments/assets/98940d82-f1fe-4dc2-80bb-72578949af29)
+
+![image](https://github.com/user-attachments/assets/725ca0dd-fe9e-46bc-a752-8f29c034b148)
