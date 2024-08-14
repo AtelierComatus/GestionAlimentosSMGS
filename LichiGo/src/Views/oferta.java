@@ -12,7 +12,6 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import javax.swing.JList;
 import static javax.swing.JOptionPane.showMessageDialog;
 import javax.swing.table.DefaultTableModel;
 
@@ -194,7 +193,7 @@ Frutas.addActionListener(new java.awt.event.ActionListener() {
       try {
         Class.forName("com.mysql.cj.jdbc.Driver");
 
-        String url = "jdbc:MySQL://localhost:3306/java_users_db";
+        String url = "jdbc:MySQL://localhost:3306/pfrutas";
         String user = "root";
         String pass = "";
 
@@ -223,7 +222,7 @@ Frutas.addActionListener(new java.awt.event.ActionListener() {
     
     private void PedirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PedirActionPerformed
         // TODO add your handling code here:
-        String Un, Fr, query;
+        String Un, Fr, query, FrutaSelec;
         
         
         //connect to database
@@ -246,7 +245,8 @@ Frutas.addActionListener(new java.awt.event.ActionListener() {
                 JOptionPane.showMessageDialog(new JFrame(), "Ingrese un numero", "Dialog",
                                      JOptionPane.ERROR_MESSAGE);
             }else {
-                Fr = FrutVerd.getText();
+                FrutaSelec = (String) Frutas.getSelectedItem();
+                Fr = FrutaSelec;
                 Un = unidadesF.getText();
                 
                 query = "INSERT INTO pedido (Fruta, Cantidad) "
