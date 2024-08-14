@@ -20,6 +20,11 @@ JOptionPane(Excepciones)
 
 Pedido realizado
 ![image](https://github.com/user-attachments/assets/508fc567-ea22-434b-a8b5-11a945f7d837)
+![lulo](https://github.com/user-attachments/assets/8eff7165-1829-4840-946f-356ca24f255e)
+
+Registro en base de datos
+![dbFru](https://github.com/user-attachments/assets/eebfafe4-9c6f-4b0e-9421-d93b25b2fb2b)
 
 Paquetes
 ![image](https://github.com/user-attachments/assets/d773b81a-7070-4bee-949a-a4605d579914)
+
