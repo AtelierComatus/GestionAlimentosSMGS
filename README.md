@@ -28,3 +28,7 @@ Registro en base de datos
 Paquetes
 ![image](https://github.com/user-attachments/assets/d773b81a-7070-4bee-949a-a4605d579914)
 
+Arquitectura VCM
+![image](https://github.com/user-attachments/assets/9e3d39e6-af2e-41f1-9c87-41b5541dcee5)
+
+
